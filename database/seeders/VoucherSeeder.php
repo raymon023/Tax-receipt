@@ -79,7 +79,7 @@ class VoucherSeeder extends Seeder
 
 
         Voucher::create([
-            'name' => 'REGISTRO DE OPERACIONES PARA EMPRESAS ACOGIDAS A REGIMENES ESPECIALES DE TRIBUTACION',
+            'name' => 'FACTURA REGIMEN ESPECIAL DE TRIBUTACION',
             'fixed_part' => 'B',
             'type' => '14',
             'quantity' => '0',
@@ -88,7 +88,7 @@ class VoucherSeeder extends Seeder
         ]);
 
         Voucher::create([
-            'name' => 'REGISTRO DE OPERACIONES PARA EMPRESAS ACOGIDAS A REGIMENES ESPECIALES DE TRIBUTACION',
+            'name' => 'FACTURA REGIMEN ESPECIAL DE TRIBUTACION',
             'fixed_part' => 'B',
             'type' => '15',
             'quantity' => '0',

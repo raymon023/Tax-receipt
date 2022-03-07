@@ -7,62 +7,46 @@
 
     <div class="py-12">
         <!-- component -->
-        <section class="container antialiased bg-gray-100 text-gray-600 h-screen px-4">
-            <div class="flex flex-col justify-center h-full">
-                <!-- Table -->
-                <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
-                    <header class="mx-2 px-5 py-4 border-b border-gray-100">
-                        <h2 class="mx-4 font-semibold text-gray-800">Vouchers</h2>
-                    </header>
-                    <div class="p-3">
-                        <div class="overflow-x-auto">
-                            <table class="table-auto w-full">
-                                <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
-                                    <tr>
-                                        <th class="p-2 whitespace-nowrap">
-                                            <div class="font-semibold text-left">Name</div>
-                                        </th>
-                                        <th class="p-2 whitespace-nowrap">
-                                            <div class="font-semibold text-left">Type</div>
-                                        </th>
-                                        <th class="p-2 whitespace-nowrap">
-                                            <div class="font-semibold text-left">Number voucher</div>
-                                        </th>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class=" align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200 w-full">
+                            <thead class="bg-gray-50">
+                                <tr class="py-6">
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number voucher</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs text-green font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                                </tr>
+                            </thead>
 
-                                        <th class="p-2 whitespace-nowrap">
-                                            <div class="font-semibold text-left">Quantity</div>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-
-                             @foreach ($vouchers as $voucher)
-                             <tbody class="text-sm divide-y divide-gray-100">
+                            @foreach ($vouchers as $voucher)
+                            <tbody class="bg-white divide-y divide-gray-200">
                                 <tr>
-                                    <td class="p-2 whitespace-nowrap">
+                                    <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
-
-                                            <div class="font-medium text-center text-gray-800">{{ $voucher->name }}</div>
+                                            {{$voucher->name}}
                                         </div>
                                     </td>
-                                    <td class="p-2 whitespace-nowrap">
-                                        <div class="font-medium text-center text-gray-800">{{ $voucher->type }}</div>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{$voucher->type}}
                                     </td>
-                                    <td class="p-2 whitespace-nowrap">
-                                        <div class="text-center font-medium text-green-500">{{ $voucher->number_voucher}}</div>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                       {{$voucher->number_voucher}}
                                     </td>
-                                    <td class="p-2 whitespace-nowrap">
-                                        <div class="text-lg text-center">{{ $voucher->quantity }}</div>
-                                    </td>
-                                </tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-green-500">{{$voucher->quantity}}</td>
 
+                                </tr>
                             </tbody>
-                             @endforeach
-                            </table>
-                        </div>
+                            @endforeach
+
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
     </div>
 </x-app-layout>
