@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Voucher;
+use App\Http\Controllers\Voucher\VoucherController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::controller(VoucherController::class)->group(function () {
+
+    Route::get('/vouchers', 'index')->name('vouchers.index');
+});
