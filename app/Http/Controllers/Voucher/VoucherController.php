@@ -16,4 +16,17 @@ class VoucherController extends Controller
             'vouchers' => $vouchers
         ]);
     }
+
+
+    public function assignmentVoucher()
+    {
+
+
+        return view('Voucher.assignment.index');
+    }
+
+
+    public function store(Request $request)
+    {
+    }
 }

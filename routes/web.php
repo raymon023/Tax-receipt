@@ -27,4 +27,5 @@ require __DIR__ . '/auth.php';
 Route::controller(VoucherController::class)->group(function () {
 
     Route::get('/vouchers', 'index')->name('vouchers.index');
+    Route::get('/vouchers/assignment', 'index')->name('vouchers.assignment.index');
 });
