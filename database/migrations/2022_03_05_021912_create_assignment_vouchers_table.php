@@ -19,6 +19,8 @@ class CreateAssignmentVouchersTable extends Migration
             $table->date('date received');
             $table->date('valid_up_to');
             $table->integer('quantity');
+            $table->string('last number')->nullable();
+
 
 
             $table->foreignId('voucher_id')->constrained();
