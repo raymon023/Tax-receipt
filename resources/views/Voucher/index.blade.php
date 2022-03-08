@@ -15,10 +15,10 @@
                         <table class="min-w-full divide-y divide-gray-200 w-full">
                             <thead class="bg-gray-50">
                                 <tr class="py-6">
-                                    <th scope="col" class="py-2 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                    <th scope="col" class="py-2 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                                    <th scope="col" class="py-2 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number voucher</th>
-                                    <th scope="col" class="py-2 px-6 py-3 text-left text-xs text-green font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                                    <th scope="col" class="py-4 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th scope="col" class="text-center py-4 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                    <th scope="col" class="text-center py-4 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number voucher</th>
+                                    <th scope="col" class="text-center py-4 px-6 py-3 text-left text-xs text-green font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
                                 </tr>
                             </thead>
 
@@ -37,7 +37,6 @@
                                        {{$voucher->number_voucher}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-green-500">{{$voucher->quantity}}</td>
-
                                 </tr>
                             </tbody>
                             @endforeach

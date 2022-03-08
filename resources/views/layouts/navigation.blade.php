@@ -23,6 +23,13 @@
                         {{ __('Vouchers') }}
                     </x-nav-link>
                 </div>
+
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('vouchers.assignment.index')" :active="request()->routeIs('vouchers.assignment.index')">
+                        {{ __('Assignment Vouchers') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -79,6 +86,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('vouchers.index')" :active="request()->routeIs('vouchers.index')">
                 {{ __('Vouchers') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('vouchers.assignment.index')" :active="request()->routeIs('vouchers.assignment.index')">
+                {{ __('Assignment Vouchers') }}
             </x-responsive-nav-link>
         </div>
 

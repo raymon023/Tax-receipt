@@ -88,7 +88,7 @@ class VoucherSeeder extends Seeder
         ]);
 
         Voucher::create([
-            'name' => 'FACTURA REGIMEN ESPECIAL DE TRIBUTACION',
+            'name' => 'COMPROBANTES GUBERNAMENTALES',
             'fixed_part' => 'B',
             'type' => '15',
             'quantity' => '0',

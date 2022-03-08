@@ -22,7 +22,7 @@ class VoucherController extends Controller
     {
 
 
-        return view('Voucher.assignment.index');
+        return view('Voucher.assignment');
     }
 
 
